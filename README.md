@@ -1,4 +1,19 @@
-# TN Real Estate — Website Project
+## Part 3 Changelog
+| Date | Change | Reason |
+|------|--------|--------|
+| 2026-11-03 | Fixed [describe the Part 2 problem] | Lecturer feedback on Part 2 |
+| 2026-11-03 | Added JSON listings with search and filter | Part 3: dynamic content |
+| 2026-11-03 | Added FAQ accordion, Leaflet map and lightbox | Part 3: interactive elements |
+| 2026-11-03 | Added SEO meta tags, robots.txt and sitemap.xml | Part 3: SEO |
+| 2026-11-03 | Added enquiry and contact forms with validation | Part 3: forms |
+| 2026-11-03 | Updated README and references | Part 3: documentation |
+
+## References
+- Leaflet - https://leafletjs.com
+- OpenStreetMap contributors - https://www.openstreetmap.org/copyright
+- Formspree - https://formspree.io
+- MDN Web Docs - https://developer.mozilla.org
+- Images: [your photo sources]# TN Real Estate — Website Project
 
 ## Project Title
 TN Real Estate Website (WEDE5020 POE)
@@ -164,4 +179,4 @@ navigation menu on every page.
 ## Part 3 chanelog
 | data |change | reason |
 |------|-------|--------|
-2026-11-01 | Added JSON-driven lisstings with search and filter | part 3: dynamic conteny and search  |
+2026-11-01 | AddedJSON-driven lisstings with search and filter | part 3: dynamic conteny and search  |
