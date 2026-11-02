@@ -1,0 +1,37 @@
+<section class="form-section">  
+    <h1>Make an Enquiry</h1>  
+    <p>Ask about a property, book a hotel or request an event venue.</p>  
+    
+    <form id="tnForm" data-validate data-type="enquiry" novalidate>    
+        <label for="name">Full name</label>    
+        <input id="name" name="name" type="text" required minlength="2">    
+        <small class="error" id="name-err"></small>    
+        
+        <label for="email">Email</label>    
+        <input id="email" name="email" type="email" required>    
+        <small class="error" id="email-err"></small>    
+        
+        <label for="phone">Phone (e.g. 0821234567)</label>    
+        <input id="phone" name="phone" type="tel" required pattern="0[0-9]{9}">    
+        <small class="error" id="phone-err"></small>    
+        
+        <label for="service">Service required</label>    
+        <select id="service" name="service" required>      
+            <option value="">Choose...</option>     
+            <option>Buy a property</option>      
+            <option>Rent a house, apartment or room</option>      
+            <option>Book a hotel or guest house</option>      
+            <option>Book an event venue</option>    
+        </select>    
+        <small class="error" id="service-err"></small> 
+
+        <label for="listing">Listing (optional)</label>    
+        <input id="listing" name="listing" type="text">    
+        <label for="message">Message</label>    
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500"></textarea>   
+        <small class="error" id="message-err"></small>    
+        
+        <button type="submit" class="btn">Send enquiry</button>    
+        <p id="formStatus" role="status"></p>  
+    </form>
+</section>
