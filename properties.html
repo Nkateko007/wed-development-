@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Houses and Apartments for Sale | TN Real Estate</title>  
+  <meta name="description"        
+     content="Browse houses and apartments for sale across South Africa.                 
+     Search by location and type with TN Real Estate.">  
+     <link rel="canonical" href="https://YOUR-SITE-URL/properties.html">  
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>TN Real Estate</h1>
+    <p>Homes &bull; Rooms &bull; Hotels &bull; Event Venues</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html" class="current">Properties</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="hotels.html">Hotels &amp; Accommodation</a></li>
+        <li><a href="venues.html">Event Venues</a></li>
+        <li><a href="list-property.html">List Your Property</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="listings">
+      <h1>Properties for sale</h1>
+
+      <div class="search-box">
+        <input type="text" id="search-location" placeholder="Search by location or keywoed..."aria-label="search listings">
+        <select id="filter-type"aria-label="Property type">
+        <option value="">All Types</option>
+        <option value="house">House</option>
+        <option value="apartment"></option>
+        <option value="room"></option>
+        <option value="hotel"></option>
+        <option value="venue"></option>
+        </select>
+      </div>
+      <p id="result-count"></p>
+      <div class="property-grid" id="listing-grid" date-categories="house, apartment"></div>
+      </section>
+    </main>
+
+  <footer>
+    &copy; 2026 TN Real Estate. All rights reserved.
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
