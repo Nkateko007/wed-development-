@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TN Real Estate | Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <header>
+    <h1>TN Real Estate</h1>
+    <p>Homes &bull; Rooms &bull; Hotels &bull; Event Venues</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="hotels.html">Hotels &amp; Accommodation</a></li>
+        <li><a href="venues.html">Event Venues</a></li>
+        <li><a href="list-property.html">List Your Property</a></li>
+        <li><a href="contact.html" class="current">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>Have a question about a listing, or need help finding a place? Get in touch.</p>
+    <section class="form-section">  
+      <h1>Contact Us</h1>  
+      <form id="tnForm" data-validate data-type="contact" novalidate>    
+        <label for="name">Full name</label>    
+        <input id="name" name="name" type="text" required minlength="2">    
+        <small class="error" id="name-err"></small>    
+        
+        <label for="email">Email</label>    
+        <input id="email" name="email" type="email" required>    
+        <small class="error" id="email-err"></small>    
+        
+        <label for="phone">Phone (e.g. 0821234567)</label>    
+        <input id="phone" name="phone" type="tel" required pattern="0[0-9]{9}">    
+        <small class="error" id="phone-err"></small>    
+        
+        <label for="message">Message</label>    
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500"></textarea>    
+        <small class="error" id="message-err"></small>    
+        
+        <button type="submit" class="btn">Send message</button>    
+        <p id="formStatus" role="status"></p>
+      </form>
+    </section>
+    <!--
+      PLACEHOLDER: Paste your Google Maps embed here.
+      How to get it:
+      1. Go to Google Maps and search for your office address.
+      2. Click "Share" > "Embed a map" tab.
+      3. Copy the <iframe> code Google gives you.
+      4. Paste it below, replacing this comment (keep it inside .map-box
+         so it gets the right size/styling from style.css).
+    -->
+    <div class="map-box">
+      <!-- <iframe src="PASTE_YOUR_GOOGLE_MAPS_EMBED_URL_HERE" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> -->
+    </div>
+
+    <h2>Get In Touch</h2>
+    <p>Phone: 011 000 0000 <br> Email: info@tnrealestate.co.za</p>
+    <p>Office Hours: Monday - Friday, 08:00am - 17:00pm</p>
+    <!-- PART 3 ADDITION: interactive map, inside <main> -->
+      <section class="map-section">  
+        <h2>Find Us</h2>  
+        <div id="map" style="height:350px;border-radius:10px"></div>
+      </section>
+  </main>
+
+  <footer>
+    &copy; 2026 TN Real Estate. All rights reserved.
+  </footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>  
+const map = L.map('map').setView([-26.2041, 28.0473], 12);  
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',    
+{attribution: '&copy; OpenStreetMap contributors'}).addTo(map);  
+L.marker([-26.2041, 28.0473]).addTo(map).bindPopup('TN Real Estate office').openPopup();
+</script>
+  <script src="js/main.js"></script>
+  .form-section{max-width:640px;margin:40px auto;padding:0 20px}
+  .form-section form{background:#fff;padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+  .form-section label{display:block;margin:14px 0 4px;font-weight:bold}
+  .form-section input,.form-section select,.form-section textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:5px;font:inherit}
+  .form-section input.invalid,.form-section select.invalid,.form-section textarea.invalid{border:2px solid #c0392b}
+  .error{color:#c0392b;display:block;min-height:1.2em}
+  #formStatus{margin-top:15px;font-weight:bold}
+  .form-section button{margin-top:18px;border:0;cursor:pointer}
+</body>
+</html>
